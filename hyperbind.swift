@@ -72,7 +72,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 // Hyper key is typically Control+Option+Command+Shift
 func isHyperKeyPressed(flags: CGEventFlags) -> Bool {
-    let hyperKeyFlags: CGEventFlags = [.maskControl, .maskAlternate, .maskCommand, .maskShift]
+    // let hyperKeyFlags: CGEventFlags = [.maskControl, .maskAlternate, .maskCommand, .maskShift]
+    let hyperKeyFlags: CGEventFlags = [.maskShift, .maskControl, .maskAlternate]
     return flags.contains(hyperKeyFlags)
 }
 
